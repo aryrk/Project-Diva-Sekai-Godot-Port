@@ -15,6 +15,10 @@ run/main_scene="res://MV/Envy Baby/Envy_Baby.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AnimHelper="*res://Script/Helper/anim_helper.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray()
