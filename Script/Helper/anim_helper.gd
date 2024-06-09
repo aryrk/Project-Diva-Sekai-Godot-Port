@@ -53,24 +53,17 @@ func add_all_anim(AnimPlayer,AnimTree):
 		else:
 			second_add = false
 			
-		print (second_add)
-			
 		if i >= animations.size()-1:
 			blend_tree.connect_node(previous_add,1,anim1_name)
-			print("Anim [ "+anim1_name+" ("+str(i)+") (1)] connected to " + previous_add)
 		else:
 			blend_tree.connect_node(current_add_node,0,anim1_name)
-			print("Anim [ "+anim1_name+" ("+str(i)+") (0)] connected to " + current_add_node)
 			
 			if !second_add:
 				blend_tree.connect_node(current_add_node,1,anim2_name)
-				print("Anim [ "+anim2_name+" ("+str(i)+") (1)] connected to " + current_add_node)
 			else:
 				if previous_add!="":
 					blend_tree.connect_node(previous_add,1,current_add_node)
-					print("Node [ "+current_add_node+" (1)] connected to " + previous_add)
 		previous_add = current_add_node
 		
 	blend_tree.connect_node("output",0,first_add_node)
-	print(first_add_node+" connected to output")
 		

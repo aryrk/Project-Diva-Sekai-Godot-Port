@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AnimHelper="*res://Script/Helper/anim_helper.gd"
+DscCommand="*res://Script/Helper/dsc_command.gd"
 
 [editor_plugins]
 
@@ -29,5 +30,7 @@ enabled=PackedStringArray()
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=0
 textures/vram_compression/import_etc2_astc=true
+environment/glow/upscale_mode=0
 occlusion_culling/use_occlusion_culling=true
